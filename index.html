@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Portfolio Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>GitHub Portfolio Analyzer</h1>
+
+        <p>
+            Analyze your GitHub profile and discover ways
+            to improve your developer portfolio.
+        </p>
+
+        <form id="analyze-form">
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter GitHub username"
+                aria-label="GitHub username"
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="analyze-button">
+                Analyze Profile
+            </button>
+        </form>
+
+        <p id="message" role="status" aria-live="polite">
+            Enter a username to get started.
+        </p>
+        
+        <section id="results" hidden>
+            <div class="profile">
+                <img id="avatar" alt="GitHub profile picture">
+                <div>
+                    <h2 id="profile-name"></h2>
+                    <a id="profile-link" target="_blank"
+                       rel="noopener noreferrer">View GitHub Profile</a>
+                    <p id="bio"></p>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Repositories</h3>
+                    <p id="repo-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Followers</h3>
+                    <p id="followers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Following</h3>
+                    <p id="following">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Stars</h3>
+                    <p id="stars">0</p>
+                </div>
+            </div>
+
+            <h2>Top Repositories</h2>
+            <div id="repo-list"></div>
+    </section>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+ 
